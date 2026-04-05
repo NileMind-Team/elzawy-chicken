@@ -53,7 +53,7 @@ const Footer = () => {
                   className="w-12 h-12 object-contain"
                 />
                 <span className="text-2xl font-bold bg-gradient-to-r from-[#E41E26] to-[#FFFFFF] bg-clip-text text-transparent">
-                  Elzawy-Chicken
+                  ElZawy Chicken
                 </span>
               </div>
             </Link>

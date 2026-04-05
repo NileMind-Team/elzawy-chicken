@@ -190,7 +190,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             JSON.stringify({
               ...userDataWithAvatar,
               roles: roles,
-            })
+            }),
           );
         }
       } catch (err) {
@@ -254,7 +254,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           icon: FaCalendarAlt,
           label: "تقارير المبيعات بالوقت والتاريخ",
           color: "#E41E26",
-        }
+        },
       );
     }
 
@@ -354,7 +354,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               {/* Title and Icon for Medium+ Screens */}
               <div className="flex items-center gap-2">
                 <h1 className="hidden md:block text-xl lg:text-2xl font-bold text-[#E41E26] dark:text-[#E41E26] transition-all duration-300">
-                  Elzawy-Chicken
+                  ElZawy Chicken
                 </h1>
 
                 {/* Home Icon for Medium+ Screens */}
@@ -461,7 +461,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
                         >
                           انضم إلى{" "}
                           <span className="font-semibold text-gray-800 dark:text-gray-200">
-                            Elzawy-Chicken
+                            ElZawy Chicken
                           </span>
                         </p>
                         <p
