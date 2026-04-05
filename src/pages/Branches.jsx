@@ -294,10 +294,10 @@ const Branches = () => {
   return (
     <>
       <Helmet>
-        <title>الزاوي نيو | El-Zawy New</title>
+        <title>الزاوي تشيكن | Elzawy Chicken</title>
         <meta
           name="description"
-          content="الزاوي نيو، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
+          content="الزاوي تشيكن، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
         />
       </Helmet>
 
@@ -412,7 +412,7 @@ const Branches = () => {
                 transition={{ delay: 0.4 }}
                 className="text-white/80 text-xs sm:text-sm md:text-base px-2"
               >
-                اكتشف فروع ElZawy - New القريبة منك وتعرّف على تفاصيل كل فرع
+                اكتشف فروع Elzawy-Chicken القريبة منك وتعرّف على تفاصيل كل فرع
                 وتقييمات العملاء
               </motion.p>
             </div>

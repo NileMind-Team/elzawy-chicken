@@ -490,10 +490,10 @@ export default function Profile() {
   return (
     <>
       <Helmet>
-        <title>الزاوي نيو | El-Zawy New</title>
+        <title>الزاوي تشيكن | Elzawy Chicken</title>
         <meta
           name="description"
-          content="الزاوي نيو، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
+          content="الزاوي تشيكن، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
         />
       </Helmet>
       <div
