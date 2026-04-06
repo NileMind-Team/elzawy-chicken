@@ -31,13 +31,13 @@ export default function SearchBar({
           {/* Search Input */}
           <div className="flex-1">
             <div className="relative group" style={{ direction: "ltr" }}>
-              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+              <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className="w-full border border-gray-200 bg-white text-black rounded-xl sm:rounded-2xl pr-10 pl-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base shadow-lg"
+                className="w-full border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-xl sm:rounded-2xl pr-10 pl-4 py-3 sm:py-4 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-transparent transition-all duration-200 text-sm sm:text-base shadow-lg"
                 placeholder="...البحث بالبريد الإلكتروني"
                 style={{ textAlign: "right" }}
               />
@@ -49,7 +49,7 @@ export default function SearchBar({
                       setTimeout(() => searchUsers(), 100);
                     }
                   }}
-                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#580304] transition-colors duration-200"
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-[#A83232] transition-colors duration-200"
                 >
                   <FaTimes size={14} />
                 </button>
@@ -66,8 +66,8 @@ export default function SearchBar({
               disabled={isSearching || !searchTerm.trim()}
               className={`px-6 py-3 rounded-xl font-semibold text-sm sm:text-base shadow-lg transition-all duration-300 flex items-center gap-2 ${
                 isSearching || !searchTerm.trim()
-                  ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                  : "bg-[#580304] text-white hover:bg-[#3d0203] hover:shadow-xl"
+                  ? "bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed"
+                  : "bg-[#A83232] text-white hover:bg-[#3d0203] hover:shadow-xl"
               }`}
             >
               {isSearching ? (

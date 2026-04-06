@@ -38,7 +38,7 @@ export default function DeliveryAreaForm({
         </h3>
         <button
           onClick={resetForm}
-          className="text-gray-500 hover:text-[#580304] dark:text-gray-400 dark:hover:text-[#580304] transition-colors duration-200 flex-shrink-0 ml-2"
+          className="text-gray-500 hover:text-[#A83232] dark:text-gray-400 dark:hover:text-[#A83232] transition-colors duration-200 flex-shrink-0 ml-2"
         >
           <FaTimes size={16} className="sm:size-5" />
         </button>
@@ -56,17 +56,17 @@ export default function DeliveryAreaForm({
               onClick={() =>
                 setFormBranchesDropdownOpen(!formBranchesDropdownOpen)
               }
-              className="w-full flex items-center justify-between border-2 border-gray-300 bg-white rounded-xl px-4 py-3 text-black focus:ring-2 focus:ring-[#580304] transition-all duration-200 text-sm sm:text-base dark:bg-gray-700 dark:border-gray-600 dark:text-white hover:border-[#580304]"
+              className="w-full flex items-center justify-between border-2 border-gray-300 bg-white rounded-xl px-4 py-3 text-black focus:ring-2 focus:ring-[#A83232] transition-all duration-200 text-sm sm:text-base dark:bg-gray-700 dark:border-gray-600 dark:text-white hover:border-[#A83232]"
             >
               <span className="flex items-center gap-2">
-                <FaBuilding className="text-[#580304]" />
+                <FaBuilding className="text-[#A83232]" />
                 {getSelectedBranchName()}
               </span>
               <motion.div
                 animate={{ rotate: formBranchesDropdownOpen ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <FaChevronDown className="text-[#580304]" />
+                <FaChevronDown className="text-[#A83232]" />
               </motion.div>
             </button>
 
@@ -100,14 +100,14 @@ export default function DeliveryAreaForm({
             اسم المنطقة *
           </label>
           <div className="relative group">
-            <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+            <FaMapMarkerAlt className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
             <input
               type="text"
               name="areaName"
               value={formData.areaName}
               onChange={handleInputChange}
               required
-              className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-[#580304] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#580304]"
+              className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-[#A83232] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#A83232]"
               placeholder="أدخل اسم المنطقة"
             />
           </div>
@@ -119,7 +119,7 @@ export default function DeliveryAreaForm({
             تكلفة التوصيل (ج.م) *
           </label>
           <div className="relative group">
-            <FaMoneyBillWave className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+            <FaMoneyBillWave className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
             <input
               type="number"
               name="fee"
@@ -128,7 +128,7 @@ export default function DeliveryAreaForm({
               required
               min="0"
               step="0.01"
-              className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-[#580304] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#580304]"
+              className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-[#A83232] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#A83232]"
               placeholder="0.00"
             />
           </div>
@@ -141,7 +141,7 @@ export default function DeliveryAreaForm({
               أقل وقت (دقيقة) *
             </label>
             <div className="relative group">
-              <FaTruck className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+              <FaTruck className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
               <input
                 type="number"
                 name="estimatedTimeMin"
@@ -149,7 +149,7 @@ export default function DeliveryAreaForm({
                 onChange={handleInputChange}
                 required
                 min="0"
-                className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-[#580304] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#580304]"
+                className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-[#A83232] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#A83232]"
                 placeholder="أقل"
               />
             </div>
@@ -159,7 +159,7 @@ export default function DeliveryAreaForm({
               أقصى وقت (دقيقة) *
             </label>
             <div className="relative group">
-              <FaTruck className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+              <FaTruck className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
               <input
                 type="number"
                 name="estimatedTimeMax"
@@ -167,7 +167,7 @@ export default function DeliveryAreaForm({
                 onChange={handleInputChange}
                 required
                 min="0"
-                className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-[#580304] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#580304]"
+                className="w-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-[#A83232] transition-all duration-200 text-sm sm:text-base text-right hover:border-[#A83232]"
                 placeholder="أقصى"
               />
             </div>
@@ -184,7 +184,7 @@ export default function DeliveryAreaForm({
             name="isActive"
             checked={formData.isActive}
             onChange={handleInputChange}
-            className="w-4 h-4 text-[#580304] bg-white border-2 border-gray-400 rounded focus:ring-[#580304] focus:ring-2 checked:bg-[#580304] checked:border-[#580304]"
+            className="w-4 h-4 text-[#A83232] bg-white border-2 border-gray-400 rounded focus:ring-[#A83232] focus:ring-2 checked:bg-[#A83232] checked:border-[#A83232]"
           />
         </div>
 
@@ -194,7 +194,7 @@ export default function DeliveryAreaForm({
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={resetForm}
-            className="flex-1 py-2.5 sm:py-3 border-2 border-[#580304] text-[#580304] rounded-lg sm:rounded-xl font-semibold hover:bg-[#580304] hover:text-white transition-all duration-300 text-sm sm:text-base"
+            className="flex-1 py-2.5 sm:py-3 border-2 border-[#A83232] text-[#A83232] rounded-lg sm:rounded-xl font-semibold hover:bg-[#A83232] hover:text-white transition-all duration-300 text-sm sm:text-base"
           >
             إلغاء
           </motion.button>
@@ -205,7 +205,7 @@ export default function DeliveryAreaForm({
             disabled={!isFormValid()}
             className={`flex-1 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base flex items-center justify-center gap-1 sm:gap-2 border-2 ${
               isFormValid()
-                ? "bg-[#580304] text-white hover:bg-[#3d0203] hover:shadow-lg hover:shadow-[#580304]/25 cursor-pointer border-[#580304]"
+                ? "bg-[#A83232] text-white hover:bg-[#3d0203] hover:shadow-lg hover:shadow-[#A83232]/25 cursor-pointer border-[#A83232]"
                 : "bg-gray-300 text-gray-500 cursor-not-allowed border-gray-300"
             }`}
           >

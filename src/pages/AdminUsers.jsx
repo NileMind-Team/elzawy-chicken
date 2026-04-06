@@ -150,7 +150,7 @@ export default function AdminUsers() {
         icon: "warning",
         title: title || "تحذير",
         text: message,
-        confirmButtonColor: "#580304",
+        confirmButtonColor: "#A83232",
         background: "#ffffff",
         color: "#000000",
         showConfirmButton: false,
@@ -225,13 +225,13 @@ export default function AdminUsers() {
   const getRoleBadgeColor = (role) => {
     switch (role) {
       case "Admin":
-        return "bg-red-100 text-red-800 border border-red-200";
+        return "bg-red-100 text-red-800 border border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-800";
       case "Restaurant":
-        return "bg-blue-100 text-blue-800 border border-blue-200";
+        return "bg-blue-100 text-blue-800 border border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800";
       case "Branch":
-        return "bg-green-100 text-green-800 border border-green-200";
+        return "bg-green-100 text-green-800 border border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800";
       default:
-        return "bg-gray-100 text-gray-800 border border-gray-200";
+        return "bg-gray-100 text-gray-800 border border-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-600";
     }
   };
 
@@ -251,14 +251,14 @@ export default function AdminUsers() {
   const getStatusBadge = (user) => {
     if (user.isActive === false) {
       return (
-        <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold border border-red-200 flex items-center gap-1">
+        <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold border border-red-200 dark:bg-red-900/30 dark:text-red-300 dark:border-red-800 flex items-center gap-1">
           <FaLock className="text-xs" />
           معطل
         </span>
       );
     }
     return (
-      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold border border-green-200 flex items-center gap-1">
+      <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold border border-green-200 dark:bg-green-900/30 dark:text-green-300 dark:border-green-800 flex items-center gap-1">
         <FaLockOpen className="text-xs" />
         مفعل
       </span>
@@ -281,8 +281,8 @@ export default function AdminUsers() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5f5] to-[#ffe5e5] px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#580304]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#A83232]/5 to-[#A83232]/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#A83232]"></div>
       </div>
     );
   }
@@ -303,19 +303,19 @@ export default function AdminUsers() {
         />
       </Helmet>
       <div
-        className={`min-h-screen bg-gradient-to-br from-[#580304]/5 via-[#580304]/10 to-[#580304]/20 px-3 sm:px-4 md:px-6 py-3 sm:py-6 relative font-sans overflow-hidden transition-colors duration-300`}
+        className={`min-h-screen bg-gradient-to-br from-white via-[#A83232]/5 to-[#A83232]/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-3 sm:py-6 relative font-sans overflow-hidden transition-colors duration-300`}
         style={{ direction: "rtl" }}
       >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 sm:-left-20 -top-10 sm:-top-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#580304]/10 to-transparent rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
-          <div className="absolute -right-10 sm:-right-20 -bottom-10 sm:-bottom-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-transparent to-[#580304]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
+          <div className="absolute -left-10 sm:-left-20 -top-10 sm:-top-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#A83232]/10 to-transparent rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
+          <div className="absolute -right-10 sm:-right-20 -bottom-10 sm:-bottom-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-transparent to-[#A83232]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
         </div>
 
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate(-1)}
-          className="fixed top-3 sm:top-4 left-3 sm:left-4 z-50 bg-white/80 backdrop-blur-md hover:bg-[#580304] hover:text-white rounded-full p-2 sm:p-3 text-[#580304] border-2 border-[#580304] shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group"
+          className="fixed top-3 sm:top-4 left-3 sm:left-4 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md hover:bg-[#A83232] hover:text-white rounded-full p-2 sm:p-3 text-[#A83232] dark:text-gray-300 border border-[#A83232] dark:border-gray-600 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group"
         >
           <FaArrowLeft
             size={14}
@@ -327,7 +327,7 @@ export default function AdminUsers() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, type: "spring" }}
-          className="max-w-7xl mx-auto bg-white/90 backdrop-blur-xl shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl border-2 border-gray-300 relative overflow-hidden"
+          className="max-w-7xl mx-auto bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl shadow-xl sm:shadow-2xl rounded-2xl sm:rounded-3xl border border-white/50 dark:border-gray-700/50 relative overflow-hidden"
         >
           <Header />
 
@@ -342,7 +342,7 @@ export default function AdminUsers() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleAddNewUser}
-                className="flex items-center gap-2 bg-[#580304] text-white px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl sm:shadow-3xl hover:shadow-4xl hover:shadow-[#580304]/50 transition-all duration-300 text-sm sm:text-base md:text-lg border-2 border-white whitespace-nowrap transform translate-y-2 hover:bg-[#3d0203]"
+                className="flex items-center gap-2 bg-[#A83232] text-white px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl sm:shadow-3xl hover:shadow-4xl hover:shadow-[#A83232]/50 transition-all duration-300 text-sm sm:text-base md:text-lg border-2 border-white whitespace-nowrap transform translate-y-2 hover:bg-[#3d0203]"
               >
                 <FaPlus className="text-sm sm:text-base md:text-lg" />
                 <span>إضافة مستخدم جديد</span>
@@ -394,7 +394,7 @@ export default function AdminUsers() {
                             disabled={currentPage === 1}
                             className={`p-2 sm:p-3 rounded-xl border ${
                               currentPage === 1
-                                ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed border-gray-300"
+                                ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed border-gray-300 dark:border-gray-600"
                                 : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
                             }`}
                           >
@@ -405,7 +405,7 @@ export default function AdminUsers() {
                             {getPaginationNumbers().map((pageNum, index) => (
                               <React.Fragment key={index}>
                                 {pageNum === "..." ? (
-                                  <span className="px-2 sm:px-3 py-1 sm:py-2 text-gray-500">
+                                  <span className="px-2 sm:px-3 py-1 sm:py-2 text-gray-500 dark:text-gray-400">
                                     ...
                                   </span>
                                 ) : (
@@ -415,7 +415,7 @@ export default function AdminUsers() {
                                     }
                                     className={`px-3 sm:px-4 py-1 sm:py-2 rounded-xl font-semibold border ${
                                       currentPage === pageNum
-                                        ? "bg-[#580304] text-white shadow-lg border-[#580304]"
+                                        ? "bg-[#A83232] text-white shadow-lg border-[#A83232]"
                                         : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
                                     }`}
                                   >
@@ -431,7 +431,7 @@ export default function AdminUsers() {
                             disabled={currentPage === totalPages}
                             className={`p-2 sm:p-3 rounded-xl border ${
                               currentPage === totalPages
-                                ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed border-gray-300"
+                                ? "bg-gray-200 dark:bg-gray-700 text-gray-400 cursor-not-allowed border-gray-300 dark:border-gray-600"
                                 : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-gray-300 dark:border-gray-600"
                             }`}
                           >

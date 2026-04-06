@@ -232,7 +232,7 @@ const showErrorAlert = (errorMessages) => {
               </div>`,
         timer: 2500,
         showConfirmButton: false,
-        confirmButtonColor: "#580304",
+        confirmButtonColor: "#A83232",
       });
       return;
     }
@@ -258,7 +258,7 @@ const showErrorAlert = (errorMessages) => {
               </div>`,
         timer: 2500,
         showConfirmButton: false,
-        confirmButtonColor: "#580304",
+        confirmButtonColor: "#A83232",
       });
       return;
     }
@@ -284,7 +284,7 @@ const showErrorAlert = (errorMessages) => {
       html: htmlMessages.join(""),
       timer: 2500,
       showConfirmButton: false,
-      confirmButtonColor: "#580304",
+      confirmButtonColor: "#A83232",
     });
   }
 };
@@ -355,7 +355,7 @@ export default function AdminBranches() {
               icon: "error",
               title: "تم الرفض",
               text: "ليس لديك صلاحية للوصول إلى هذه الصفحة.",
-              confirmButtonColor: "#580304",
+              confirmButtonColor: "#A83232",
               timer: 2500,
               showConfirmButton: false,
             });
@@ -385,7 +385,7 @@ export default function AdminBranches() {
             icon: "error",
             title: "تم الرفض",
             text: errorText || "فشل في التحقق من صلاحياتك.",
-            confirmButtonColor: "#580304",
+            confirmButtonColor: "#A83232",
             timer: 2500,
             showConfirmButton: false,
           });
@@ -506,7 +506,7 @@ export default function AdminBranches() {
           text: `تم ${currentStatus ? "تعطيل" : "تفعيل"} الفرع.`,
           timer: 2000,
           showConfirmButton: false,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     } catch (errorMessages) {
@@ -551,7 +551,7 @@ export default function AdminBranches() {
             text: "تم تحديث الفرع بنجاح.",
             timer: 2000,
             showConfirmButton: false,
-            confirmButtonColor: "#580304",
+            confirmButtonColor: "#A83232",
           });
         }
       } else {
@@ -570,7 +570,7 @@ export default function AdminBranches() {
             text: "تم إضافة الفرع الجديد بنجاح.",
             timer: 2000,
             showConfirmButton: false,
-            confirmButtonColor: "#580304",
+            confirmButtonColor: "#A83232",
           });
         }
       }
@@ -600,8 +600,8 @@ export default function AdminBranches() {
 
   if (isLoadingAuth || isLoadingData) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#580304]/5 to-[#580304]/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#580304]"></div>
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#A83232]/5 to-[#A83232]/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#A83232]"></div>
       </div>
     );
   }
@@ -620,19 +620,19 @@ export default function AdminBranches() {
         />
       </Helmet>
       <div
-        className="min-h-screen bg-gradient-to-br from-white via-[#580304]/5 to-[#580304]/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-3 sm:py-6 relative font-sans overflow-hidden"
+        className="min-h-screen bg-gradient-to-br from-white via-[#A83232]/5 to-[#A83232]/10 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 md:px-6 py-3 sm:py-6 relative font-sans overflow-hidden"
         dir="rtl"
       >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -left-10 sm:-left-20 -top-10 sm:-top-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#580304]/10 to-[#3d0203]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
-          <div className="absolute -right-10 sm:-right-20 -bottom-10 sm:-bottom-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#3d0203]/10 to-[#580304]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
+          <div className="absolute -left-10 sm:-left-20 -top-10 sm:-top-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#A83232]/10 to-[#3d0203]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
+          <div className="absolute -right-10 sm:-right-20 -bottom-10 sm:-bottom-20 w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 bg-gradient-to-r from-[#3d0203]/10 to-[#A83232]/10 rounded-full blur-2xl sm:blur-3xl animate-pulse"></div>
         </div>
 
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate(-1)}
-          className="fixed top-3 sm:top-4 left-3 sm:left-4 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md hover:bg-[#580304] hover:text-white rounded-full p-2 sm:p-3 text-[#580304] dark:text-gray-300 border border-[#580304] dark:border-gray-600 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group"
+          className="fixed top-3 sm:top-4 left-3 sm:left-4 z-50 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md hover:bg-[#A83232] hover:text-white rounded-full p-2 sm:p-3 text-[#A83232] dark:text-gray-300 border border-[#A83232] dark:border-gray-600 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl group"
         >
           <FaArrowLeft
             size={14}
@@ -659,7 +659,7 @@ export default function AdminBranches() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleAddNewBranch}
-                className="flex items-center gap-2 bg-[#580304] text-white px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl sm:shadow-3xl hover:shadow-4xl hover:shadow-[#580304]/50 transition-all duration-300 text-sm sm:text-base md:text-lg border-2 border-white whitespace-nowrap transform translate-y-2 hover:bg-[#3d0203]"
+                className="flex items-center gap-2 bg-[#A83232] text-white px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 rounded-xl sm:rounded-2xl font-semibold shadow-2xl sm:shadow-3xl hover:shadow-4xl hover:shadow-[#A83232]/50 transition-all duration-300 text-sm sm:text-base md:text-lg border-2 border-white whitespace-nowrap transform translate-y-2 hover:bg-[#3d0203]"
               >
                 <FaPlus className="text-sm sm:text-base md:text-lg" />
                 <span>إضافة فرع جديد</span>
@@ -718,7 +718,7 @@ export default function AdminBranches() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={handleAddNewBranch}
-                        className="flex items-center gap-2 bg-[#580304] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-[#580304] hover:bg-[#3d0203]"
+                        className="flex items-center gap-2 bg-[#A83232] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-[#A83232] hover:bg-[#3d0203]"
                       >
                         <FaPlus className="text-xs sm:text-sm" />
                         <span>أضف أول فرع لك</span>

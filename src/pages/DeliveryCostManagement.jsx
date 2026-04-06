@@ -38,7 +38,7 @@ export default function DeliveryCostManagement() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-[#fff5f5] to-[#ffe5e5] dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-4">
-        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#580304]"></div>
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#A83232]"></div>
       </div>
     );
   }
@@ -52,7 +52,7 @@ export default function DeliveryCostManagement() {
           content="الزاوي تشيكن، مطعم عصري يقدم أفضل المأكولات الشرقية والغربية وتجربة طعام فريدة، مع خدمة عالية الجودة."
         />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-[#580304]/5 via-[#580304]/10 to-[#580304]/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 py-4 sm:py-8 transition-colors duration-300">
+      <div className="min-h-screen bg-gradient-to-br from-[#A83232]/5 via-[#A83232]/10 to-[#A83232]/20 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 px-3 sm:px-4 py-4 sm:py-8 transition-colors duration-300">
         <div className="max-w-7xl mx-auto" dir="rtl">
           <HeaderStats
             deliveryAreasCount={deliveryAreas.length}
@@ -106,7 +106,7 @@ export default function DeliveryCostManagement() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsAdding(true)}
-                    className="flex items-center gap-2 bg-[#580304] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-white"
+                    className="flex items-center gap-2 bg-[#A83232] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-sm sm:text-base mx-auto border border-white"
                   >
                     <span>أضف أول منطقة</span>
                     <FaPlus className="text-xs sm:text-sm" />

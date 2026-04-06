@@ -37,14 +37,14 @@ export default function UserForm({
       exit={{ opacity: 0, x: 20 }}
       className="xl:col-span-1"
     >
-      <div className="bg-white/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 shadow-lg sticky top-4 sm:top-6">
+      <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 md:p-5 lg:p-6 border border-gray-200 dark:border-gray-700 shadow-lg sticky top-4 sm:top-6">
         <div className="flex items-center justify-between mb-3 sm:mb-4">
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 truncate">
+          <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 dark:text-white truncate">
             إضافة مستخدم جديد
           </h3>
           <button
             onClick={resetForm}
-            className="text-gray-500 hover:text-[#580304] transition-colors duration-200 flex-shrink-0 ml-2 border border-gray-300 rounded-full p-1 hover:border-[#580304]"
+            className="text-gray-500 dark:text-gray-400 hover:text-[#A83232] transition-colors duration-200 flex-shrink-0 ml-2 border border-gray-300 dark:border-gray-600 rounded-full p-1 hover:border-[#A83232]"
           >
             <FaTimes size={16} className="sm:size-5" />
           </button>
@@ -53,11 +53,11 @@ export default function UserForm({
         <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
           <div className="grid grid-cols-1 xs:grid-cols-2 gap-2 sm:gap-3 md:gap-4">
             <div>
-              <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                 الاسم الأول *
               </label>
               <div className="relative group" style={{ direction: "ltr" }}>
-                <FaUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+                <FaUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
                 <input
                   type="text"
                   name="firstName"
@@ -66,18 +66,18 @@ export default function UserForm({
                     setFormData({ ...formData, firstName: e.target.value })
                   }
                   required
-                  className="w-full border border-gray-300 bg-white text-black rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400 dark:hover:border-gray-500"
                   placeholder="الاسم الأول"
                   style={{ textAlign: "right" }}
                 />
               </div>
             </div>
             <div>
-              <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+              <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
                 الاسم الأخير *
               </label>
               <div className="relative group" style={{ direction: "ltr" }}>
-                <FaUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+                <FaUser className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
                 <input
                   type="text"
                   name="lastName"
@@ -86,7 +86,7 @@ export default function UserForm({
                     setFormData({ ...formData, lastName: e.target.value })
                   }
                   required
-                  className="w-full border border-gray-300 bg-white text-black rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400"
+                  className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400 dark:hover:border-gray-500"
                   placeholder="الاسم الأخير"
                   style={{ textAlign: "right" }}
                 />
@@ -95,11 +95,11 @@ export default function UserForm({
           </div>
 
           <div>
-            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
               البريد الإلكتروني *
             </label>
             <div className="relative group" style={{ direction: "ltr" }}>
-              <FaEnvelope className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+              <FaEnvelope className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
               <input
                 type="email"
                 name="email"
@@ -108,7 +108,7 @@ export default function UserForm({
                   setFormData({ ...formData, email: e.target.value })
                 }
                 required
-                className="w-full border border-gray-300 bg-white text-black rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400 dark:hover:border-gray-500"
                 placeholder="البريد الإلكتروني"
                 style={{ textAlign: "right" }}
               />
@@ -116,11 +116,11 @@ export default function UserForm({
           </div>
 
           <div>
-            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
               رقم الهاتف
             </label>
             <div className="relative group" style={{ direction: "ltr" }}>
-              <FaPhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+              <FaPhone className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
               <input
                 type="tel"
                 name="phoneNumber"
@@ -128,7 +128,7 @@ export default function UserForm({
                 onChange={(e) =>
                   setFormData({ ...formData, phoneNumber: e.target.value })
                 }
-                className="w-full border border-gray-300 bg-white text-black rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400 dark:hover:border-gray-500"
                 placeholder="رقم الهاتف"
                 style={{ textAlign: "right" }}
               />
@@ -136,14 +136,14 @@ export default function UserForm({
           </div>
 
           <div>
-            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
               كلمة المرور *
             </label>
             <div className="relative group" style={{ direction: "ltr" }}>
-              <FaLock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#580304] text-sm transition-all duration-300 group-focus-within:scale-110" />
+              <FaLock className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#A83232] text-sm transition-all duration-300 group-focus-within:scale-110" />
               <div
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-[#580304] cursor-pointer transition-colors duration-200 text-sm border border-gray-300 rounded p-1 hover:border-[#580304]"
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-[#A83232] cursor-pointer transition-colors duration-200 text-sm border border-gray-300 dark:border-gray-600 rounded p-1 hover:border-[#A83232]"
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </div>
@@ -155,7 +155,7 @@ export default function UserForm({
                   setFormData({ ...formData, password: e.target.value })
                 }
                 required
-                className="w-full border border-gray-300 bg-white text-black rounded-lg sm:rounded-xl pr-9 pl-9 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400"
+                className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl pr-9 pl-9 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#A83232] focus:border-transparent transition-all duration-200 text-sm sm:text-base hover:border-gray-400 dark:hover:border-gray-500"
                 placeholder="كلمة المرور"
                 style={{ textAlign: "right" }}
               />
@@ -163,10 +163,10 @@ export default function UserForm({
           </div>
 
           <div>
-            <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1 sm:mb-2">
+            <label className="block text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">
               الصلاحيات *
             </label>
-            <div className="space-y-2 p-3 bg-white rounded-lg sm:rounded-xl border border-gray-300">
+            <div className="space-y-2 p-3 bg-white dark:bg-gray-700 rounded-lg sm:rounded-xl border border-gray-300 dark:border-gray-600">
               {availableRoles.map((role) => (
                 <div key={role.id} className="flex items-center gap-2">
                   <input
@@ -176,11 +176,11 @@ export default function UserForm({
                     value={role.name}
                     checked={formData.roles.includes(role.name)}
                     onChange={() => handleSingleRoleSelection(role.name)}
-                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#580304] bg-white border-gray-300 rounded focus:ring-[#580304] focus:ring-2 border"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#A83232] bg-white dark:bg-gray-600 border-gray-300 dark:border-gray-500 rounded focus:ring-[#A83232] focus:ring-2"
                   />
                   <label
                     htmlFor={`role-${role.name}`}
-                    className="flex items-center gap-2 text-sm font-medium text-gray-700 cursor-pointer"
+                    className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300 cursor-pointer"
                   >
                     <span className="text-sm">{getRoleIcon(role.name)}</span>
                     <span>{role.name}</span>
@@ -196,7 +196,7 @@ export default function UserForm({
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={resetForm}
-              className="flex-1 py-2.5 sm:py-3 border-2 border-[#580304] text-[#580304] rounded-lg sm:rounded-xl font-semibold hover:bg-[#580304] hover:text-white transition-all duration-300 text-sm sm:text-base hover:border-[#3d0203]"
+              className="flex-1 py-2.5 sm:py-3 border-2 border-[#A83232] text-[#A83232] rounded-lg sm:rounded-xl font-semibold hover:bg-[#A83232] hover:text-white transition-all duration-300 text-sm sm:text-base hover:border-[#3d0203]"
             >
               إلغاء
             </motion.button>
@@ -207,8 +207,8 @@ export default function UserForm({
               disabled={!isFormValid()}
               className={`flex-1 py-2.5 sm:py-3 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base flex items-center justify-center gap-1 sm:gap-2 border ${
                 isFormValid()
-                  ? "bg-[#580304] text-white hover:bg-[#3d0203] hover:shadow-xl hover:shadow-[#580304]/25 border-[#580304]"
-                  : "bg-gray-300 text-gray-500 cursor-not-allowed border-gray-400"
+                  ? "bg-[#A83232] text-white hover:bg-[#3d0203] hover:shadow-xl hover:shadow-[#A83232]/25 border-[#A83232]"
+                  : "bg-gray-300 dark:bg-gray-700 text-gray-500 dark:text-gray-400 cursor-not-allowed border-gray-400 dark:border-gray-600"
               }`}
             >
               <FaCheck className="text-xs sm:text-sm" />

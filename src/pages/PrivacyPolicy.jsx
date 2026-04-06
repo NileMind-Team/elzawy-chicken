@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 const PrivacyPolicy = () => {
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-[#580304]/5 via-[#580304]/10 to-[#580304]/20 dark:from-gray-900 dark:to-gray-800 py-16 px-4 sm:px-6 lg:px-8"
+      className="min-h-screen bg-gradient-to-br from-[#A83232]/5 via-[#A83232]/10 to-[#A83232]/20 dark:from-gray-900 dark:to-gray-800 py-16 px-4 sm:px-6 lg:px-8"
       dir="ltr"
     >
       <div className="max-w-4xl mx-auto">
@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           transition={{ duration: 0.5 }}
           className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700"
         >
-          <div className="bg-gradient-to-r from-[#580304] to-[#3d0203] px-8 py-6">
+          <div className="bg-gradient-to-r from-[#A83232] to-[#3d0203] px-8 py-6">
             <div className="flex items-center justify-between">
               <h1 className="text-3xl font-bold text-white">Privacy Policy</h1>
               <Link
@@ -35,21 +35,21 @@ const PrivacyPolicy = () => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="prose prose-lg dark:prose-invert max-w-none"
             >
-              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 border-r-4 border-[#580304]">
+              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 border-r-4 border-[#A83232]">
                 <p className="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
                   We collect user name and email address through Facebook Login
                   for authentication purposes only.
                 </p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 border-r-4 border-[#580304]">
+              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 border-r-4 border-[#A83232]">
                 <p className="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
                   The collected data is used solely to create and manage user
                   accounts within our application.
                 </p>
               </div>
 
-              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 border-r-4 border-[#580304]">
+              <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-6 border-r-4 border-[#A83232]">
                 <p className="text-gray-800 dark:text-gray-200 text-lg leading-relaxed">
                   We do not sell, share, or distribute user data to third
                   parties.
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
 
               <div className="mt-8 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-700 dark:to-gray-800 rounded-xl p-6">
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#580304] rounded-full"></span>
+                  <span className="w-2 h-2 bg-[#A83232] rounded-full"></span>
                   Contact Information
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 text-lg">
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
                 </p>
                 <a
                   href="mailto:triples.software.1@gmail.com"
-                  className="inline-block mt-3 text-[#580304] hover:text-[#3d0203] font-medium text-lg transition-colors"
+                  className="inline-block mt-3 text-[#A83232] hover:text-[#3d0203] font-medium text-lg transition-colors"
                 >
                   triples.software.1@gmail.com
                 </a>

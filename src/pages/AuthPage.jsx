@@ -180,7 +180,7 @@ export default function AuthPage() {
           text: translateSocialError(error),
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
           didClose: () => {
             navigate("/login");
           },
@@ -227,7 +227,7 @@ export default function AuthPage() {
               text: "حدث خطأ أثناء تسجيل الدخول باستخدام Google",
               showConfirmButton: false,
               timer: 2500,
-              confirmButtonColor: "#580304",
+              confirmButtonColor: "#A83232",
               didClose: () => {
                 navigate("/login");
               },
@@ -306,7 +306,7 @@ export default function AuthPage() {
           html: errorMessage,
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     }
@@ -334,7 +334,7 @@ export default function AuthPage() {
           title: "خطأ في الاتصال",
           text: "حدث خطأ أثناء التوجيه إلى Google. يرجى المحاولة مرة أخرى.",
           confirmButtonText: "حاول مرة أخرى",
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     }
@@ -385,7 +385,7 @@ export default function AuthPage() {
             text: "تم إنشاء حسابك بنجاح! يرجى تأكيد بريدك الإلكتروني للمتابعة.",
             showConfirmButton: false,
             timer: 2500,
-            confirmButtonColor: "#580304",
+            confirmButtonColor: "#A83232",
           });
         }
       } else {
@@ -403,7 +403,7 @@ export default function AuthPage() {
             html: errorMessage,
             showConfirmButton: false,
             timer: 2500,
-            confirmButtonColor: "#580304",
+            confirmButtonColor: "#A83232",
           });
         }
       }
@@ -417,7 +417,7 @@ export default function AuthPage() {
           text: "حدث خطأ غير متوقع.",
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     }
@@ -461,7 +461,7 @@ export default function AuthPage() {
           text: "لقد أرسلنا رمز إعادة التعيين إلى بريدك الإلكتروني. يرجى التحقق من صندوق الوارد لإعادة تعيين كلمة المرور.",
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     } catch (err) {
@@ -479,7 +479,7 @@ export default function AuthPage() {
           html: translatedMessage,
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     }
@@ -502,7 +502,7 @@ export default function AuthPage() {
           text: "تم إرسال بريد تأكيد جديد إلى صندوق الوارد الخاص بك.",
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
 
@@ -521,7 +521,7 @@ export default function AuthPage() {
           text: translatedMessage,
           showConfirmButton: false,
           timer: 2500,
-          confirmButtonColor: "#580304",
+          confirmButtonColor: "#A83232",
         });
       }
     }
@@ -568,7 +568,7 @@ export default function AuthPage() {
                 text: "تم تأكيد بريدك الإلكتروني. يمكنك الآن تسجيل الدخول.",
                 showConfirmButton: false,
                 timer: 2500,
-                confirmButtonColor: "#580304",
+                confirmButtonColor: "#A83232",
               });
             }
 
@@ -620,7 +620,7 @@ export default function AuthPage() {
         ) : isProcessingGoogle ? (
           // Show only loading during Google processing
           <div className="flex flex-col items-center justify-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#580304] dark:border-[#580304] mb-6"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#A83232] dark:border-[#A83232] mb-6"></div>
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               جاري تسجيل الدخول باستخدام Google...
             </p>

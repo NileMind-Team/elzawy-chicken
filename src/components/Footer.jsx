@@ -28,13 +28,13 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-gradient-to-br from-gray-900 via-gray-800 to-[#1a1a1a] text-white relative overflow-hidden border-t border-[#580304]"
+      className="bg-gradient-to-br from-gray-900 via-gray-800 to-[#1a1a1a] text-white relative overflow-hidden border-t border-[#A83232]"
       dir="rtl"
     >
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-[#580304]/10 to-[#000000]/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-[#000000]/10 to-[#580304]/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-r from-[#580304]/5 to-[#000000]/5 rounded-full blur-3xl"></div>
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-r from-[#A83232]/10 to-[#000000]/10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-r from-[#000000]/10 to-[#A83232]/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-gradient-to-r from-[#A83232]/5 to-[#000000]/5 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
@@ -52,7 +52,7 @@ const Footer = () => {
                   alt="Elzawy-Chicken"
                   className="w-12 h-12 object-contain"
                 />
-                <span className="text-2xl font-bold bg-gradient-to-r from-[#580304] to-[#FFFFFF] bg-clip-text text-transparent">
+                <span className="text-2xl font-bold bg-gradient-to-r from-[#A83232] to-[#FFFFFF] bg-clip-text text-transparent">
                   ElZawy Chicken
                 </span>
               </div>
@@ -65,13 +65,13 @@ const Footer = () => {
 
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
-                <FaPhone className="text-[#580304] text-sm" />
+                <FaPhone className="text-[#A83232] text-sm" />
                 <span className="text-sm" dir="ltr">
                   +20 101 913 8907
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
-                <FaMapMarkerAlt className="text-[#580304] text-sm" />
+                <FaMapMarkerAlt className="text-[#A83232] text-sm" />
                 <span className="text-sm">
                   الفيوم - الحواتم - اول طريق موقف بني سويف
                 </span>
@@ -87,7 +87,7 @@ const Footer = () => {
           >
             <div className="text-center w-full">
               <h3 className="text-lg font-bold mb-4 flex items-center justify-center gap-2">
-                <FaClock className="text-[#580304]" />
+                <FaClock className="text-[#A83232]" />
                 ساعات العمل
               </h3>
 
@@ -204,7 +204,7 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#580304]"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#A83232]"></div>
     </footer>
   );
 };
