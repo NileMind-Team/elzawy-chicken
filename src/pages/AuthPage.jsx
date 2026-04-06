@@ -180,6 +180,7 @@ export default function AuthPage() {
           text: translateSocialError(error),
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
           didClose: () => {
             navigate("/login");
           },
@@ -226,6 +227,7 @@ export default function AuthPage() {
               text: "حدث خطأ أثناء تسجيل الدخول باستخدام Google",
               showConfirmButton: false,
               timer: 2500,
+              confirmButtonColor: "#580304",
               didClose: () => {
                 navigate("/login");
               },
@@ -304,6 +306,7 @@ export default function AuthPage() {
           html: errorMessage,
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
         });
       }
     }
@@ -313,7 +316,7 @@ export default function AuthPage() {
   const handleGoogleLogin = async () => {
     try {
       const returnUrl = encodeURIComponent(`${window.location.origin}/auth`);
-      const tenant = "New_Zawy";
+      const tenant = "ElZawyLelDawagenElHaya";
 
       const googleAuthUrl = `https://restaurant-template.runasp.net/api/account/login/google?returnUrl=${returnUrl}&Tenant=${tenant}`;
       window.location.href = googleAuthUrl;
@@ -331,6 +334,7 @@ export default function AuthPage() {
           title: "خطأ في الاتصال",
           text: "حدث خطأ أثناء التوجيه إلى Google. يرجى المحاولة مرة أخرى.",
           confirmButtonText: "حاول مرة أخرى",
+          confirmButtonColor: "#580304",
         });
       }
     }
@@ -381,6 +385,7 @@ export default function AuthPage() {
             text: "تم إنشاء حسابك بنجاح! يرجى تأكيد بريدك الإلكتروني للمتابعة.",
             showConfirmButton: false,
             timer: 2500,
+            confirmButtonColor: "#580304",
           });
         }
       } else {
@@ -398,6 +403,7 @@ export default function AuthPage() {
             html: errorMessage,
             showConfirmButton: false,
             timer: 2500,
+            confirmButtonColor: "#580304",
           });
         }
       }
@@ -411,6 +417,7 @@ export default function AuthPage() {
           text: "حدث خطأ غير متوقع.",
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
         });
       }
     }
@@ -454,6 +461,7 @@ export default function AuthPage() {
           text: "لقد أرسلنا رمز إعادة التعيين إلى بريدك الإلكتروني. يرجى التحقق من صندوق الوارد لإعادة تعيين كلمة المرور.",
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
         });
       }
     } catch (err) {
@@ -471,6 +479,7 @@ export default function AuthPage() {
           html: translatedMessage,
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
         });
       }
     }
@@ -493,6 +502,7 @@ export default function AuthPage() {
           text: "تم إرسال بريد تأكيد جديد إلى صندوق الوارد الخاص بك.",
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
         });
       }
 
@@ -511,6 +521,7 @@ export default function AuthPage() {
           text: translatedMessage,
           showConfirmButton: false,
           timer: 2500,
+          confirmButtonColor: "#580304",
         });
       }
     }
@@ -557,6 +568,7 @@ export default function AuthPage() {
                 text: "تم تأكيد بريدك الإلكتروني. يمكنك الآن تسجيل الدخول.",
                 showConfirmButton: false,
                 timer: 2500,
+                confirmButtonColor: "#580304",
               });
             }
 
@@ -608,7 +620,7 @@ export default function AuthPage() {
         ) : isProcessingGoogle ? (
           // Show only loading during Google processing
           <div className="flex flex-col items-center justify-center min-h-[400px]">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#E41E26] dark:border-[#E41E26] mb-6"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#580304] dark:border-[#580304] mb-6"></div>
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               جاري تسجيل الدخول باستخدام Google...
             </p>
