@@ -430,7 +430,7 @@ const ProductDetails = () => {
   const formatPriceDisplay = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#580304] font-bold text-2xl md:text-3xl">
+        <div className="text-[#A83232] font-bold text-2xl md:text-3xl">
           السعر حسب الطلب
         </div>
       );

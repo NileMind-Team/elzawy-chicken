@@ -603,7 +603,7 @@ export default function Cart() {
   const formatPriceDisplay = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#580304] font-bold text-base sm:text-lg">
+        <div className="text-[#A83232] font-bold text-base sm:text-lg">
           السعر حسب الطلب
         </div>
       );
@@ -632,7 +632,7 @@ export default function Cart() {
   const formatPriceInModal = (product) => {
     if (product.basePrice === 0) {
       return (
-        <span className="text-base sm:text-xl font-bold text-[#580304]">
+        <span className="text-base sm:text-xl font-bold text-[#A83232]">
           السعر حسب الطلب
         </span>
       );

@@ -396,7 +396,7 @@ const Favorites = () => {
   const formatPriceDisplayMobile = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#580304] font-bold text-sm">السعر حسب الطلب</div>
+        <div className="text-[#A83232] font-bold text-sm">السعر حسب الطلب</div>
       );
     }
 
@@ -423,7 +423,7 @@ const Favorites = () => {
   const formatPriceDisplay = (product) => {
     if (product.isPriceBasedOnRequest) {
       return (
-        <div className="text-[#580304] font-bold text-lg sm:text-xl">
+        <div className="text-[#A83232] font-bold text-lg sm:text-xl">
           السعر حسب الطلب
         </div>
       );

@@ -596,7 +596,7 @@ const OrderDetailsModal = ({ order, onClose }) => {
                               </p>
                               <p className="font-bold text-lg text-green-600 dark:text-green-400">
                                 {isPriceBasedOnRequest ? (
-                                  <span className="text-[#580304]">
+                                  <span className="text-[#A83232]">
                                     السعر حسب الطلب
                                   </span>
                                 ) : (

@@ -1463,7 +1463,7 @@ export default function ItemOffersManagement() {
                             className="w-full flex items-center justify-between border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-black dark:text-white rounded-lg sm:rounded-xl px-3 py-2.5 sm:py-3 outline-none focus:ring-2 focus:ring-[#580304] focus:border-transparent transition-all duration-200 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed text-right"
                           >
                             <span className="flex items-center gap-2 truncate">
-                              <FaHamburger className="text-[#580304] flex-shrink-0" />
+                              <FaHamburger className="text-[#A83232] flex-shrink-0" />
                               {formData.menuItemId
                                 ? (() => {
                                     const selectedItem = menuItems.find(
