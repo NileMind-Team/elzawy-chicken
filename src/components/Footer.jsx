@@ -15,13 +15,13 @@ const Footer = () => {
     {
       name: "فيسبوك",
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/ProstElzawy.New",
+      url: "https://www.facebook.com/ElzawyBirds?rdid=Qm1tdkKDB3DLCvCG&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CmnQApeBh%2F#",
       color: "hover:bg-blue-600",
     },
     {
       name: "واتساب",
       icon: <FaWhatsapp />,
-      url: "https://wa.me/201025256954",
+      url: "https://wa.me/201019138907",
       color: "hover:bg-green-600",
     },
   ];
@@ -67,13 +67,13 @@ const Footer = () => {
               <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
                 <FaPhone className="text-[#580304] text-sm" />
                 <span className="text-sm" dir="ltr">
-                  +20 106 002 7648
+                  +20 101 913 8907
                 </span>
               </div>
               <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors">
                 <FaMapMarkerAlt className="text-[#580304] text-sm" />
                 <span className="text-sm">
-                  الفيوم الحواتم - امام موقف بني سويف
+                  الفيوم - الحواتم - اول طريق موقف بني سويف
                 </span>
               </div>
             </div>
@@ -184,7 +184,7 @@ const Footer = () => {
                   href="https://wa.me/201062485133"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#580304] font-semibold hover:text-red-400 transition-colors duration-300"
+                  className="text-[#960507] font-semibold hover:text-red-400 transition-colors duration-300"
                 >
                   شركه TripleS للبرمجيات
                 </a>
