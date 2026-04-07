@@ -379,16 +379,19 @@ export default function Cart() {
         const basePrice = item.menuItem?.basePrice || 0;
         const itemOffer = item.menuItem?.itemOffer;
 
+        // Check if offer is valid for the selected branch (if any)
         const isOfferValidForBranch = selectedBranch
           ? checkIfOfferValidForBranch(itemOffer, selectedBranch.id)
           : false;
 
+        // Calculate price after discount
         const priceAfterDiscount = calculatePriceAfterDiscount(
           basePrice,
           itemOffer,
           isOfferValidForBranch,
         );
 
+        // Calculate discount value in money
         const discountInMoney = calculateDiscountInMoney(
           basePrice,
           itemOffer,
@@ -408,15 +411,23 @@ export default function Cart() {
           item.quantity,
         );
 
-        const finalPrice = priceAfterDiscount;
-        const totalPrice = priceAfterDiscount * item.quantity + optionsTotal;
+        // Use the price from the API response (totalPrice) as the original price with options
+        // But we need to be careful: totalPrice from API might already include options
+        const originalTotalPrice =
+          item.totalPrice || basePrice * item.quantity + optionsTotal;
+
+        // Calculate final price after discount
+        const finalPricePerUnit = priceAfterDiscount;
+        const finalTotalPrice =
+          priceAfterDiscount * item.quantity + optionsTotal;
 
         return {
           id: item.id,
           name: item.menuItem?.name || "Product",
           category: item.menuItem?.category?.name?.toLowerCase() || "meals",
           price: basePrice,
-          finalPrice: finalPrice,
+          originalPrice: basePrice, // Store original price
+          finalPrice: finalPricePerUnit,
           isPriceBasedOnRequest: basePrice === 0,
           image: item.menuItem?.imageUrl
             ? `https://restaurant-template.runasp.net/${item.menuItem.imageUrl}`
@@ -424,16 +435,20 @@ export default function Cart() {
           description: item.menuItem?.description || "",
           prepTime: prepTime,
           quantity: item.quantity,
-          totalPrice: totalPrice,
+          totalPrice: finalTotalPrice,
+          originalTotalPrice: originalTotalPrice, // Store original total price before discount
           menuItem: item.menuItem,
           menuItemOptions: item.menuItemOptions || [],
           note: item.note || "",
-          hasDiscount: isOfferValidForBranch,
+          hasDiscount: isOfferValidForBranch && discountInMoney > 0,
           discountValue: discountInMoney,
+          discountPercentage: itemOffer?.isPercentage
+            ? itemOffer.discountValue
+            : null,
           originalDiscountValue: itemOffer?.discountValue || 0,
           isPercentageDiscount: itemOffer?.isPercentage || false,
-          originalTotalPrice: item.totalPrice || basePrice * item.quantity,
           optionsTotal: optionsTotal,
+          itemOffer: itemOffer, // Store the offer for later use
         };
       });
 
@@ -611,14 +626,19 @@ export default function Cart() {
 
     if (product.hasDiscount) {
       return (
-        <>
-          <span className="text-gray-500 dark:text-gray-400 text-sm line-through">
-            {toArabicNumbers(product.price.toFixed(2))} ج.م
-          </span>
-          <span className="text-[#A83232] font-bold text-base sm:text-lg">
-            {toArabicNumbers(product.finalPrice.toFixed(2))} ج.م
-          </span>
-        </>
+        <div className="flex flex-col items-end sm:items-start">
+          <div className="flex items-center gap-2">
+            <span className="text-gray-500 dark:text-gray-400 text-sm line-through">
+              {toArabicNumbers(product.originalPrice.toFixed(2))} ج.م
+            </span>
+            <span className="text-[#A83232] font-bold text-base sm:text-lg">
+              {toArabicNumbers(product.finalPrice.toFixed(2))} ج.م
+            </span>
+          </div>
+          <div className="text-xs text-green-600 dark:text-green-400 mt-0.5">
+            خصم {toArabicNumbers(product.discountValue.toFixed(2))} ج.م
+          </div>
+        </div>
       );
     }
 
@@ -648,16 +668,24 @@ export default function Cart() {
         product.itemOffer,
         true,
       );
+      const discountValue = calculateDiscountInMoney(
+        product.basePrice,
+        product.itemOffer,
+        true,
+      );
 
       return (
-        <>
+        <div className="flex flex-wrap items-center gap-2">
           <span className="text-gray-500 dark:text-gray-400 text-xs sm:text-sm line-through">
             {toArabicNumbers(product.basePrice)} ج.م
           </span>
           <span className="text-base sm:text-xl font-bold text-[#A83232]">
             {toArabicNumbers(priceAfterDiscount.toFixed(2))} ج.م
           </span>
-        </>
+          <span className="text-xs text-green-600 dark:text-green-400">
+            (خصم {toArabicNumbers(discountValue.toFixed(2))} ج.م)
+          </span>
+        </div>
       );
     }
 
@@ -2218,10 +2246,9 @@ export default function Cart() {
                                 !item.isPriceBasedOnRequest && (
                                   <div className="absolute -top-2 -right-2 bg-[#A83232] text-white px-2 py-1 rounded-lg text-xs font-bold shadow-lg border border-white">
                                     خصم{" "}
-                                    {toArabicNumbers(
-                                      item.discountValue.toFixed(2),
-                                    )}{" "}
-                                    ج.م
+                                    {item.isPercentageDiscount
+                                      ? `${toArabicNumbers(item.originalDiscountValue)}%`
+                                      : `${toArabicNumbers(item.discountValue.toFixed(2))} ج.م`}
                                   </div>
                                 )}
                             </div>
@@ -2301,6 +2328,14 @@ export default function Cart() {
 
                             {/* Item Total */}
                             <div className="text-right min-w-20 sm:min-w-24">
+                              {item.hasDiscount && item.originalTotalPrice && (
+                                <div className="text-xs text-gray-500 dark:text-gray-400 line-through">
+                                  {toArabicNumbers(
+                                    item.originalTotalPrice.toFixed(2),
+                                  )}{" "}
+                                  ج.م
+                                </div>
+                              )}
                               <div className="font-bold text-gray-800 dark:text-white text-base sm:text-lg whitespace-nowrap">
                                 {toArabicNumbers(item.totalPrice.toFixed(2))}{" "}
                                 ج.م
@@ -2312,6 +2347,15 @@ export default function Cart() {
                                     item.optionsTotal.toFixed(2),
                                   )}{" "}
                                   ج.م للإضافات
+                                </div>
+                              )}
+                              {item.hasDiscount && item.discountValue > 0 && (
+                                <div className="text-xs text-green-600 dark:text-green-400 mt-0.5">
+                                  خصم{" "}
+                                  {toArabicNumbers(
+                                    item.discountValue.toFixed(2),
+                                  )}{" "}
+                                  ج.م
                                 </div>
                               )}
                             </div>
