@@ -1244,7 +1244,7 @@ export default function Cart() {
     if (cartItems.length === 0) {
       if (isMobile()) {
         toast.warning(
-          "الرجاء إضافة بعض المنتجات إلى سلة التسوق قبل المتابعة للدفع.",
+          "الرجاء إضافة بعض المنتجات إلى سلة التسوق قبل اتمام الطلب.",
           {
             position: "top-right",
             autoClose: 2500,
@@ -1255,7 +1255,7 @@ export default function Cart() {
         Swal.fire({
           icon: "warning",
           title: "السلة فارغة",
-          text: "الرجاء إضافة بعض المنتجات إلى سلة التسوق قبل المتابعة للدفع.",
+          text: "الرجاء إضافة بعض المنتجات إلى سلة التسوق قبل اتمام الطلب.",
           timer: 2500,
           showConfirmButton: false,
           customClass: {
@@ -2853,7 +2853,7 @@ export default function Cart() {
                   }`}
                 >
                   <FaLocationArrow className="text-sm" />
-                  المتابعة للدفع
+                  اتمام الطلب
                 </motion.button>
 
                 {/* Continue Shopping */}
